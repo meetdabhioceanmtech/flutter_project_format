@@ -1,0 +1,50 @@
+// ignore_for_file: overridden_fields, annotate_overrides
+
+import 'package:oceanmtech_dmt/data/models/model_response_extend.dart';
+import 'package:oceanmtech_dmt/domain/entities/language/app_language/app_language_entity.dart';
+
+class LanguageModel extends ModelResponseExtend {
+  final bool status;
+  final String message;
+  final List<AppLanguageEntity>? data;
+
+  LanguageModel({
+    required this.status,
+    required this.message,
+    required this.data,
+  });
+
+  factory LanguageModel.fromJson(Map<String, dynamic> json) => LanguageModel(
+        status: json["status"] ?? false,
+        message: json["message"].toString(),
+        data: json["data"] != null && json["data"]["languages"] != null
+            ? List<LanguageDetailModel>.from(json["data"]["languages"].map((x) => LanguageDetailModel.fromJson(x)))
+            : null,
+      );
+}
+
+class LanguageDetailModel extends AppLanguageEntity {
+  final int id;
+  final String title;
+  final String shortCode;
+  final int isDefault;
+
+  LanguageDetailModel({
+    required this.id,
+    required this.title,
+    required this.shortCode,
+    required this.isDefault,
+  }) : super(
+          id: id,
+          title: title,
+          shortCode: shortCode,
+          isDefault: isDefault,
+        );
+
+  factory LanguageDetailModel.fromJson(Map<String, dynamic> json) => LanguageDetailModel(
+        id: int.tryParse(json["id"].toString()) ?? 0,
+        title: json["title"]?.toString() ?? 'English',
+        shortCode: json["iso_code"]?.toString() ?? 'en',
+        isDefault: 0,
+      );
+}

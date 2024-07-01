@@ -1,0 +1,118 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:oceanmtech_dmt/common/constants/translation_constants.dart';
+import 'package:oceanmtech_dmt/common/extention/size_box_extension.dart';
+import 'package:oceanmtech_dmt/common/extention/string_extension.dart';
+import 'package:oceanmtech_dmt/common/extention/theme_extension.dart';
+import 'package:oceanmtech_dmt/di/get_it.dart';
+import 'package:oceanmtech_dmt/domain/entities/language/app_language/app_language_entity.dart';
+import 'package:oceanmtech_dmt/presentation/cubit/app_language/app_language_cubit.dart';
+import 'package:oceanmtech_dmt/presentation/globals.dart';
+import 'package:oceanmtech_dmt/presentation/journeys/screens/select_language/language_screen.dart';
+import 'package:oceanmtech_dmt/presentation/widgets/common_widget.dart';
+
+abstract class LanguageWidget extends State<LanguageScreen> {
+  late AppLanguageCubit appLanguageCubit;
+  @override
+  void initState() {
+    appLanguageCubit = getItInstance<AppLanguageCubit>();
+    appLanguageCubit.loadInitialData();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    appLanguageCubit.isMounted = false;
+    appLanguageCubit.loadingCubit.hide();
+    appLanguageCubit.close();
+    super.dispose();
+  }
+
+  Widget languageLoadedView({required AppLanguageLoadedState state, required BuildContext context}) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        10.sHeight,
+        Expanded(
+          child: GridView.builder(
+            shrinkWrap: true,
+            physics: const BouncingScrollPhysics(),
+            itemCount: state.languageEntity.length,
+            padding: EdgeInsets.symmetric(vertical: 4.h, horizontal: 12.w),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 10.w,
+              mainAxisSpacing: 12.h,
+              childAspectRatio: 3.0.r,
+            ),
+            itemBuilder: (context, index) {
+              AppLanguageEntity appLanguageEntity = state.languageEntity[index];
+              return languageContainer(
+                index: index,
+                state: state,
+                appLanguageEntity: appLanguageEntity,
+              );
+            },
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(vertical: 18.h, horizontal: 15.w),
+          child: CommonWidget.commonButton(
+            alignment: Alignment.center,
+            borderRadius: 8.r,
+            padding: EdgeInsets.symmetric(vertical: 12.h),
+            context: context,
+            text: TranslationConstants.submit.translate(context),
+            style: Theme.of(context).textTheme.body1MediumHeading.copyWith(color: appConstants.whiteBackgroundColor),
+            onTap: () async {
+              await appLanguageCubit.setLocallyLanguage(
+                selectedIndex: state.selectIndex,
+                state: state,
+                context: context,
+              );
+            },
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget languageContainer({
+    required AppLanguageLoadedState state,
+    required int index,
+    required AppLanguageEntity appLanguageEntity,
+  }) {
+    bool isSelected = state.selectedLanguage == appLanguageEntity.shortCode;
+    return GestureDetector(
+      onTap: () async {
+        await appLanguageCubit.loadLanguageLabels(
+          context: context,
+          isLanguageSet: false,
+          loadedState: state,
+          selectedIndex: index,
+          appLanguageEntity: appLanguageEntity,
+        );
+      },
+      child: CommonWidget.container(
+        borderRadius: 8.r,
+        color: isSelected ? appConstants.secondary4Color : appConstants.primary1Color,
+        padding: EdgeInsets.symmetric(horizontal: 4.w),
+        child: CommonWidget.container(
+          height: 60,
+          width: 158,
+          borderRadius: 7.r,
+          color: isSelected ? appConstants.primary1Color : appConstants.grayBackgroundColor,
+          child: Center(
+            child: CommonWidget.commonText(
+              text: appLanguageEntity.title,
+              style: Theme.of(context).textTheme.body1MediumHeading.copyWith(
+                    color: isSelected ? appConstants.whiteBackgroundColor : appConstants.neutral1Color,
+                  ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
