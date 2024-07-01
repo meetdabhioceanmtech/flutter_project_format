@@ -101,7 +101,6 @@ flutter:
     - assets/pngs/home/
     - assets/pngs/images/
     - assets/pngs/common/
-    - assets/svgs/setting/
 
     
   fonts:
