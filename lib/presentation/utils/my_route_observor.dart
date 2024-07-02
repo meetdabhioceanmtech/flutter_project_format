@@ -1,7 +1,6 @@
 import 'dart:isolate';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_isolate/flutter_isolate.dart';
 import 'package:oceanmtech_dmt/common/constants/hive_constants.dart';
 import 'package:oceanmtech_dmt/main.dart';
 import 'package:oceanmtech_dmt/presentation/globals.dart';
@@ -10,7 +9,7 @@ int currentTime = 0;
 String currentScreen = '';
 
 class MyRouteObserver extends RouteObserver<PageRoute<dynamic>> {
-  FlutterIsolate? isolate;
+  // FlutterIsolate? isolate;
 
   Future<void> runTimer(String routeName) async {
     // userAppActivity?.addAll({routeName: currentTime.toString()});

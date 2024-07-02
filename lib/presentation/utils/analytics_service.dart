@@ -38,7 +38,9 @@ class AnalyticsService {
 
     // Google Analytics Tracking
     try {
-      await analytics.logEvent(name: eventName ?? currentRouteName ?? '', parameters: data);
+      await analytics.logEvent(
+        name: eventName ?? currentRouteName ?? '',
+      );
       // ignore: empty_catches
     } catch (e) {}
   }

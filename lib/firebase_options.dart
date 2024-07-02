@@ -66,10 +66,11 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyBOcLya1lRhxdZLoHHQfygeUWpz7Jis5Cs',
-    appId: '1:948770165877:ios:5d4f165b0b85862a37143c',
+    appId: '1:948770165877:ios:5397c8dd62ccc24037143c',
     messagingSenderId: '948770165877',
     projectId: 'flutter-project-format',
     storageBucket: 'flutter-project-format.appspot.com',
-    iosBundleId: 'com.oceanmtech.jobsearch.companyapp',
+    iosBundleId: 'com.flutter.project.format',
   );
+
 }
