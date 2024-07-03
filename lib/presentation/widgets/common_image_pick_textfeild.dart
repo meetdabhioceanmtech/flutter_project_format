@@ -1,5 +1,3 @@
-// ignore_for_file: must_be_immutable
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
@@ -12,21 +10,21 @@ import 'package:oceanmtech_dmt/presentation/widgets/common_widget.dart';
 
 class CommonImagePickTextFeild extends StatefulWidget {
   final bool isMultipleImagePick;
-  bool? isEdit = false;
-  bool? showImageDialog;
-  bool? isShowImag = true;
-  Color? borderColor;
-  double? borderRadius;
-  double? heightFactor;
-  double? buttonHeight;
-  String? pathToDisplay;
-  VoidCallback? onTextTap;
-  VoidCallback? onImageSelect;
-  CommonImagePickTextFeild({
+  final bool? isEdit;
+  final bool? showImageDialog;
+  final bool? isShowImag;
+  final Color? borderColor;
+  final double? borderRadius;
+  final double? heightFactor;
+  final double? buttonHeight;
+  final String? pathToDisplay;
+  final VoidCallback? onTextTap;
+  final VoidCallback? onImageSelect;
+  const CommonImagePickTextFeild({
     super.key,
     required this.isMultipleImagePick,
-    this.isEdit,
-    this.isShowImag,
+    this.isEdit = false,
+    this.isShowImag = true,
     this.borderColor,
     this.borderRadius,
     this.heightFactor,

@@ -14,7 +14,6 @@
 		9303CE9C28C0877700BD4908 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9303CE9B28C0877700BD4908 /* NotificationService.m */; };
 		935932B228FD5090002CECD8 /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 643C45C72C626074CA18DB86 /* Pods_Runner.framework */; };
 		935932B428FD50CC002CECD8 /* Pods_ImageNotification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C327454868D691464A7A49DF /* Pods_ImageNotification.framework */; };
-		9395001228BC97AB00171C7D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9395001128BC97AB00171C7D /* StoreKit.framework */; };
 		93E0BAE028B784810064BB33 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93E0BADF28B784810064BB33 /* GoogleService-Info.plist */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
@@ -64,7 +63,6 @@
 		939028D028899980003AF6DD /* gu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = gu; path = gu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		939028D128899C87003AF6DD /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Main.strings; sourceTree = "<group>"; };
 		939028D228899C87003AF6DD /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		9395001128BC97AB00171C7D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		93AAE03B287DBF1F002D1E77 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		93E0BADF28B784810064BB33 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		93F2D23828ABEB440086BBED /* RunnerRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RunnerRelease.entitlements; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				935932B228FD5090002CECD8 /* Pods_Runner.framework in Frameworks */,
-				9395001228BC97AB00171C7D /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +177,6 @@
 		C77EC815932448DDAF3E1914 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9395001128BC97AB00171C7D /* StoreKit.framework */,
 				93AAE03B287DBF1F002D1E77 /* libsqlite3.tbd */,
 				C327454868D691464A7A49DF /* Pods_ImageNotification.framework */,
 				643C45C72C626074CA18DB86 /* Pods_Runner.framework */,

@@ -29,6 +29,12 @@ A new Flutter project.
 - s= means ==> Screen Name ==> (sProduct ==> Single Product Screen) | (cProduct ==> Single Combo Screen)
 - 'https://bakery.oceanapplications.com/link?s=sProduct&code=${userLoginData?.id}'
 
+## APK Size
+- (27.5MB)
+
+## Platform
+- Andorid
+- IOS
 
 <!-- Generate Hive Adapters -->
 flutter packages pub run build_runner build --delete-conflicting-outputs
