@@ -6,9 +6,12 @@ A new Flutter project.
 - Deep Link
 - Notification 
 - API Format
-- Firebase
 - Common Widgets
 - Image Crop functionality
+- Firebase
+- Firebase Crashlytics
+    - Test a debug mode please remove main in kReleaseMode (Line no = 100 || Find project Search (FlutterError.onError))
+    - How to check Add On Tap Method in => FirebaseCrashlytics.instance.crash()
 
 ## State Management and Project Managemnt
 - Bloc / Cubit

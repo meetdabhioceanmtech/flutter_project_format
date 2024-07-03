@@ -1,3 +1,4 @@
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -144,15 +145,17 @@ class _LoginScreenState extends State<LoginScreen> {
               CommonWidget.commonButton(
                 text: TranslationConstants.login.translate(context),
                 context: context,
-                onTap: () async {
-                  // if (loginKey.currentState!.validate()) {
-                  //   await loginCubit.login(
-                  //     context: context,
-                  //     email: emailController.text.toString().toLowerCase().trim(),
-                  //     password: passwordController.text.toString(),
-                  //   );
-                  // }
-                },
+                // onTap: () async {
+                //   // if (loginKey.currentState!.validate()) {
+                //   //   await loginCubit.login(
+                //   //     context: context,
+                //   //     email: emailController.text.toString().toLowerCase().trim(),
+                //   //     password: passwordController.text.toString(),
+                //   //   );
+                //   // }
+                // },
+                // onTap: () => throw Exception(),
+                onTap: () => FirebaseCrashlytics.instance.crash(),
               ),
               15.sHeight,
               Row(
