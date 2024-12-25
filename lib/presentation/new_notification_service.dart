@@ -142,11 +142,11 @@ class PushNotificationService {
       requestSoundPermission: true,
       requestBadgePermission: true,
       requestAlertPermission: true,
-      onDidReceiveLocalNotification: (id, title, body, payload) async {
-        if (payload != null) {
-          notificationCubit.updateSelectedMessage(payloadModel: NotificationPayloadModel.fromJson(jsonDecode(payload)));
-        }
-      },
+      // onDidReceiveLocalNotification: (id, title, body, payload) async {
+      //   if (payload != null) {
+      //     notificationCubit.updateSelectedMessage(payloadModel: NotificationPayloadModel.fromJson(jsonDecode(payload)));
+      //   }
+      // },
     );
     initSettings = InitializationSettings(android: androidSettings, iOS: iOSSettings);
     await flutterLocalNotificationsPlugin.initialize(

@@ -59,7 +59,7 @@ String? mobileNo;
 
 late AppConstants appConstants;
 
-StreamSubscription<ConnectivityResult>? connectivitySubscription;
+StreamSubscription<List<ConnectivityResult>>? connectivitySubscription;
 StreamController<InternetStatus>? connnectionController = StreamController<InternetStatus>.broadcast();
 FocusScopeNode currentFocus = FocusScope.of(buildContext);
 

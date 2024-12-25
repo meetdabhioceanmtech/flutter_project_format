@@ -24,7 +24,7 @@ class _AppHomeState extends AppHomeWidget {
     buildContext = context;
     return PopScope(
       canPop: false,
-      onPopInvoked: (didPop) async {
+      onPopInvokedWithResult: (didPop, result) async {
         if (didPop) return;
         final NavigatorState navigator = Navigator.of(context);
         if (bottomNavigationCubit.state == 0) {

@@ -9,12 +9,12 @@ import 'package:oceanmtech_dmt/presentation/globals.dart';
 
 void listenConnection() {
   connectivitySubscription = Connectivity().onConnectivityChanged.listen(
-    (ConnectivityResult result) {
+    (List<ConnectivityResult> result) {
       if (kDebugMode) {
         print("Connection$result");
       }
-      connectivityResult = result;
-      if (result == ConnectivityResult.wifi) {
+      connectivityResult = result.last;
+      if (result.last == ConnectivityResult.wifi) {
         if (Platform.isAndroid) {
           _tryConnection();
         } else {
@@ -26,7 +26,7 @@ void listenConnection() {
             bgColor: Colors.green[800],
           );
         }
-      } else if (result == ConnectivityResult.mobile) {
+      } else if (result.last == ConnectivityResult.mobile) {
         if (Platform.isAndroid) {
           _tryConnection();
         } else {

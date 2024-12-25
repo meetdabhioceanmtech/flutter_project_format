@@ -22,7 +22,7 @@ class _LanguageScreenState extends LanguageWidget {
   Widget build(BuildContext context) {
     return PopScope(
       canPop: false,
-      onPopInvoked: (didPop) {
+      onPopInvokedWithResult: (didPop, result) {
         if (didPop) return;
         final NavigatorState navigator = Navigator.of(context);
         var where = languages.where((element) => element.isDefault == 1).toList();
