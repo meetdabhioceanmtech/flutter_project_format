@@ -2,6 +2,17 @@
 
 A new Flutter project.
 
+## Project Setup
+- Change App package name use change_app_package_name htis package
+    - after change package name remove this package
+- Change App name 
+    - android/app/src/main/AndroidManifest.xml
+    - ios/Runner/Info.plist
+- Connect Firebase
+    - Connect Android and Ios app
+    - Firebase Add Crashlytics
+    - Other Requirements functionality start in firebase
+
 ## Project functionality
 - Deep Link
 - Notification 
@@ -33,14 +44,22 @@ A new Flutter project.
 - 'https://bakery.oceanapplications.com/link?s=sProduct&code=${userLoginData?.id}'
 
 ## APK Size
-- (27.5MB)
+- Basic Project Time APK Size : (27.5MB)
 
 ## Platform
 - Andorid
 - IOS
 
-<!-- Generate Hive Adapters -->
+## Platform Generate Hive Adapters
 flutter packages pub run build_runner build --delete-conflicting-outputs
 
-<!-- Create APK -->
+## ENV Change
+dart run build_runner clean
+dart run build_runner build --delete-conflicting-outputs
+
+## PlatformCreate APK
 flutter build apk --release --dart-define="VERSION=1"
+
+## Current Project Requirements Version : Last Update - 25/12/2024 - Add By Meet Dabhi
+Flutter Version => 3.24.5
+Dart Version => 3.5.4
