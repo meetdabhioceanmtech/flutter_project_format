@@ -4,11 +4,11 @@ import 'dart:developer';
 import 'dart:io';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart' as dio;
-import 'package:oceanmtech_dmt/data/core/api_client.dart';
-import 'package:oceanmtech_dmt/data/core/api_constants.dart';
-import 'package:oceanmtech_dmt/data/core/unathorised_exception.dart';
-import 'package:oceanmtech_dmt/data/models/model_response_extend.dart';
-import 'package:oceanmtech_dmt/domain/entities/app_error.dart';
+import 'package:flutter_project/data/core/api_client.dart';
+import 'package:flutter_project/data/core/api_constants.dart';
+import 'package:flutter_project/data/core/unathorised_exception.dart';
+import 'package:flutter_project/data/models/model_response_extend.dart';
+import 'package:flutter_project/domain/entities/app_error.dart';
 
 enum APICallType { GET, POST, DIRECTGET, DIRECTPOST, POSTFILES, DELETE }
 

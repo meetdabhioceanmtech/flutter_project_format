@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:oceanmtech_dmt/presentation/globals.dart';
-import 'package:oceanmtech_dmt/presentation/widgets/common_widget.dart';
+import 'package:flutter_project/presentation/globals.dart';
+import 'package:flutter_project/presentation/widgets/common_widget.dart';
 
 enum SnackbarType { SUCCESS, ERROR, PROCESSING }
 

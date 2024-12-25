@@ -7,10 +7,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_editor/image_editor.dart' hide ImageSource;
-import 'package:oceanmtech_dmt/common/extention/theme_extension.dart';
-import 'package:oceanmtech_dmt/presentation/globals.dart';
-import 'package:oceanmtech_dmt/presentation/journeys/screens/image_crop/crop_image_screen.dart';
-import 'package:oceanmtech_dmt/presentation/widgets/common_widget.dart';
+import 'package:flutter_project/common/extention/theme_extension.dart';
+import 'package:flutter_project/presentation/globals.dart';
+import 'package:flutter_project/presentation/journeys/screens/image_crop/crop_image_screen.dart';
+import 'package:flutter_project/presentation/widgets/common_widget.dart';
 
 abstract class CropImageWidget extends State<CropImageScreen> with WidgetsBindingObserver {
   String imageURL = '';

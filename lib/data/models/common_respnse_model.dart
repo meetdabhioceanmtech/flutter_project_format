@@ -1,6 +1,6 @@
 // ignore_for_file: annotate_overrides
 
-import 'package:oceanmtech_dmt/data/models/model_response_extend.dart';
+import 'package:flutter_project/data/models/model_response_extend.dart';
 
 class CommonResponseModel extends ModelResponseExtend {
   final bool status;

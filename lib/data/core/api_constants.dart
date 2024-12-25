@@ -1,4 +1,4 @@
-import 'package:oceanmtech_dmt/presentation/utils/app_functions.dart';
+import 'package:flutter_project/presentation/utils/app_functions.dart';
 
 class ApiConstatnts {
   static const String baseUrl = 'https://jobs.oceanmtech.com/api/v1/';

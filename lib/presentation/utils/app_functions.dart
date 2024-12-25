@@ -8,10 +8,10 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:oceanmtech_dmt/common/constants/common_router.dart';
-import 'package:oceanmtech_dmt/common/constants/hive_constants.dart';
-import 'package:oceanmtech_dmt/common/constants/route_constants.dart';
-import 'package:oceanmtech_dmt/presentation/globals.dart';
+import 'package:flutter_project/common/constants/common_router.dart';
+import 'package:flutter_project/common/constants/hive_constants.dart';
+import 'package:flutter_project/common/constants/route_constants.dart';
+import 'package:flutter_project/presentation/globals.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void commonPrint(Object? object) {

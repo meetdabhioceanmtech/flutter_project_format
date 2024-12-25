@@ -2,7 +2,7 @@
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:oceanmtech_dmt/presentation/new_notification_service.dart';
+import 'package:flutter_project/presentation/new_notification_service.dart';
 
 part 'selected_notification_state.dart';
 

@@ -1,4 +1,4 @@
-import 'package:oceanmtech_dmt/domain/entities/theme_entity.dart';
+import 'package:flutter_project/domain/entities/theme_entity.dart';
 
 enum Themes { light, dark }
 

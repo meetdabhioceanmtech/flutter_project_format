@@ -1,8 +1,8 @@
 // ignore_for_file: annotate_overrides, overridden_fields
 
 import 'package:hive/hive.dart';
-import 'package:oceanmtech_dmt/data/models/model_response_extend.dart';
-import 'package:oceanmtech_dmt/domain/entities/general_setting/general_setting_entity.dart';
+import 'package:flutter_project/data/models/model_response_extend.dart';
+import 'package:flutter_project/domain/entities/general_setting/general_setting_entity.dart';
 part 'general_setting_model.g.dart';
 
 class GeneralSettingModel extends ModelResponseExtend {

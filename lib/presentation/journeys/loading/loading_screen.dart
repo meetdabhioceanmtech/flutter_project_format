@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:oceanmtech_dmt/presentation/cubit/loading/loading_cubit.dart';
-import 'package:oceanmtech_dmt/presentation/globals.dart';
+import 'package:flutter_project/presentation/cubit/loading/loading_cubit.dart';
+import 'package:flutter_project/presentation/globals.dart';
 
 class LoadingScreen extends StatelessWidget {
   final Widget screen;

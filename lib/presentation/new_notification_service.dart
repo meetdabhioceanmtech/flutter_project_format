@@ -7,12 +7,12 @@ import 'dart:io';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:http/http.dart' as http;
-import 'package:oceanmtech_dmt/presentation/cubit/notification/selected_notification/selected_notification_cubit.dart';
-import 'package:oceanmtech_dmt/common/extention/string_extension.dart';
-import 'package:oceanmtech_dmt/di/get_it.dart';
-import 'package:oceanmtech_dmt/presentation/globals.dart';
-import 'package:oceanmtech_dmt/presentation/utils/analytics_service.dart';
-import 'package:oceanmtech_dmt/presentation/utils/app_functions.dart';
+import 'package:flutter_project/presentation/cubit/notification/selected_notification/selected_notification_cubit.dart';
+import 'package:flutter_project/common/extention/string_extension.dart';
+import 'package:flutter_project/di/get_it.dart';
+import 'package:flutter_project/presentation/globals.dart';
+import 'package:flutter_project/presentation/utils/analytics_service.dart';
+import 'package:flutter_project/presentation/utils/app_functions.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();

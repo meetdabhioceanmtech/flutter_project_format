@@ -5,11 +5,11 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
-import 'package:oceanmtech_dmt/domain/entities/general_setting/general_setting_entity.dart';
-import 'package:oceanmtech_dmt/presentation/cubit/counter/counter_cubit.dart';
-import 'package:oceanmtech_dmt/data/core/build_context.dart';
-import 'package:oceanmtech_dmt/domain/entities/user/user_entity.dart';
-import 'package:oceanmtech_dmt/presentation/utils/app_constants.dart';
+import 'package:flutter_project/domain/entities/general_setting/general_setting_entity.dart';
+import 'package:flutter_project/presentation/cubit/counter/counter_cubit.dart';
+import 'package:flutter_project/data/core/build_context.dart';
+import 'package:flutter_project/domain/entities/user/user_entity.dart';
+import 'package:flutter_project/presentation/utils/app_constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final GlobalKey<ScaffoldMessengerState> snackbarKey = GlobalKey<ScaffoldMessengerState>();

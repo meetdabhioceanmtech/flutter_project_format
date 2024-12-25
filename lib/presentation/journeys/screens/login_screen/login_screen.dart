@@ -2,14 +2,14 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:oceanmtech_dmt/common/constants/translation_constants.dart';
-import 'package:oceanmtech_dmt/common/extention/size_box_extension.dart';
-import 'package:oceanmtech_dmt/common/extention/string_extension.dart';
-import 'package:oceanmtech_dmt/common/extention/theme_extension.dart';
-import 'package:oceanmtech_dmt/di/get_it.dart';
-import 'package:oceanmtech_dmt/presentation/cubit/toggle_cubit/toggle_cubit.dart';
-import 'package:oceanmtech_dmt/presentation/globals.dart';
-import 'package:oceanmtech_dmt/presentation/widgets/common_widget.dart';
+import 'package:flutter_project/common/constants/translation_constants.dart';
+import 'package:flutter_project/common/extention/size_box_extension.dart';
+import 'package:flutter_project/common/extention/string_extension.dart';
+import 'package:flutter_project/common/extention/theme_extension.dart';
+import 'package:flutter_project/di/get_it.dart';
+import 'package:flutter_project/presentation/cubit/toggle_cubit/toggle_cubit.dart';
+import 'package:flutter_project/presentation/globals.dart';
+import 'package:flutter_project/presentation/widgets/common_widget.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

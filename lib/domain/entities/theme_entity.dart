@@ -1,4 +1,4 @@
-import 'package:oceanmtech_dmt/common/constants/theme.dart';
+import 'package:flutter_project/common/constants/theme.dart';
 
 class ThemeEntity {
   final String key;

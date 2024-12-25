@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:oceanmtech_dmt/data/datasources/common_api_call.dart';
-import 'package:oceanmtech_dmt/data/core/api_client.dart';
-import 'package:oceanmtech_dmt/data/models/model_response_extend.dart';
-import 'package:oceanmtech_dmt/domain/entities/app_error.dart';
+import 'package:flutter_project/data/datasources/common_api_call.dart';
+import 'package:flutter_project/data/core/api_client.dart';
+import 'package:flutter_project/data/models/model_response_extend.dart';
+import 'package:flutter_project/domain/entities/app_error.dart';
 
 abstract class ApiDataSource {
   Future<Either<AppError, T>> dataFatchApi<T extends ModelResponseExtend>({

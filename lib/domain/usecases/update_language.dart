@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:oceanmtech_dmt/data/repositories/app_repository.dart';
-import 'package:oceanmtech_dmt/domain/entities/app_error.dart';
-import 'package:oceanmtech_dmt/domain/usecases/usecase.dart';
+import 'package:flutter_project/data/repositories/app_repository.dart';
+import 'package:flutter_project/domain/entities/app_error.dart';
+import 'package:flutter_project/domain/usecases/usecase.dart';
 
 class UpdateLanguage extends UseCase<void, String> {
   final AppRepository appRepository;

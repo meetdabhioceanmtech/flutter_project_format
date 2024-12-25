@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
-import 'package:oceanmtech_dmt/common/extention/theme_extension.dart';
-import 'package:oceanmtech_dmt/data/models/my_notification_model.dart';
-import 'package:oceanmtech_dmt/di/get_it.dart';
-import 'package:oceanmtech_dmt/presentation/cubit/notification/notification_handle/notification_cubit.dart';
-import 'package:oceanmtech_dmt/presentation/globals.dart';
-import 'package:oceanmtech_dmt/presentation/journeys/screens/notification_screen/notification_screen.dart';
-import 'package:oceanmtech_dmt/presentation/new_notification_service.dart';
-import 'package:oceanmtech_dmt/presentation/utils/app_functions.dart';
-import 'package:oceanmtech_dmt/presentation/widgets/common_widget.dart';
+import 'package:flutter_project/common/extention/theme_extension.dart';
+import 'package:flutter_project/data/models/my_notification_model.dart';
+import 'package:flutter_project/di/get_it.dart';
+import 'package:flutter_project/presentation/cubit/notification/notification_handle/notification_cubit.dart';
+import 'package:flutter_project/presentation/globals.dart';
+import 'package:flutter_project/presentation/journeys/screens/notification_screen/notification_screen.dart';
+import 'package:flutter_project/presentation/new_notification_service.dart';
+import 'package:flutter_project/presentation/utils/app_functions.dart';
+import 'package:flutter_project/presentation/widgets/common_widget.dart';
 
 abstract class NotificationWidget extends State<NotificationScreen> {
   late NotificationCubit notificationViewCubit;

@@ -4,16 +4,16 @@ import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:oceanmtech_dmt/common/constants/api_end_point_constants.dart';
-import 'package:oceanmtech_dmt/common/constants/hive_constants.dart';
-import 'package:oceanmtech_dmt/data/datasources/common_api_call.dart';
-import 'package:oceanmtech_dmt/data/models/general_setting_model.dart';
-import 'package:oceanmtech_dmt/data/models/model_response_extend.dart';
-import 'package:oceanmtech_dmt/domain/entities/app_error.dart';
-import 'package:oceanmtech_dmt/domain/usecases/api_usecase.dart';
-import 'package:oceanmtech_dmt/presentation/custom_snackbar.dart';
-import 'package:oceanmtech_dmt/presentation/globals.dart';
-import 'package:oceanmtech_dmt/presentation/utils/app_functions.dart';
+import 'package:flutter_project/common/constants/api_end_point_constants.dart';
+import 'package:flutter_project/common/constants/hive_constants.dart';
+import 'package:flutter_project/data/datasources/common_api_call.dart';
+import 'package:flutter_project/data/models/general_setting_model.dart';
+import 'package:flutter_project/data/models/model_response_extend.dart';
+import 'package:flutter_project/domain/entities/app_error.dart';
+import 'package:flutter_project/domain/usecases/api_usecase.dart';
+import 'package:flutter_project/presentation/custom_snackbar.dart';
+import 'package:flutter_project/presentation/globals.dart';
+import 'package:flutter_project/presentation/utils/app_functions.dart';
 
 class GeneralSettingCubit extends Cubit<double> {
   final ApiUsecase apiUsecase;

@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:oceanmtech_dmt/data/repositories/app_repository.dart';
-import 'package:oceanmtech_dmt/domain/entities/app_error.dart';
-import 'package:oceanmtech_dmt/domain/params/no_params.dart';
-import 'package:oceanmtech_dmt/domain/usecases/usecase.dart';
+import 'package:flutter_project/data/repositories/app_repository.dart';
+import 'package:flutter_project/domain/entities/app_error.dart';
+import 'package:flutter_project/domain/params/no_params.dart';
+import 'package:flutter_project/domain/usecases/usecase.dart';
 
 class GetPreferredLanguage extends UseCase<String, NoParams> {
   final AppRepository appRepository;

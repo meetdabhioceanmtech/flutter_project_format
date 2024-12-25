@@ -7,17 +7,17 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:oceanmtech_dmt/common/constants/hive_constants.dart';
-import 'package:oceanmtech_dmt/presentation/cubit/bottom_navigation/bottom_navigation_cubit.dart';
-import 'package:oceanmtech_dmt/presentation/cubit/counter/counter_cubit.dart';
-import 'package:oceanmtech_dmt/common/extention/string_extension.dart';
-import 'package:oceanmtech_dmt/common/extention/theme_extension.dart';
-import 'package:oceanmtech_dmt/presentation/globals.dart';
-import 'package:oceanmtech_dmt/presentation/journeys/app_home/app_home_screen.dart';
-import 'package:oceanmtech_dmt/presentation/journeys/screens/bottom_navbar/bottom_nav_constants.dart';
-import 'package:oceanmtech_dmt/presentation/journeys/screens/bottom_navbar/nav_title_widget.dart';
-import 'package:oceanmtech_dmt/presentation/widgets/common_widget.dart';
-import 'package:oceanmtech_dmt/presentation/utils/app_functions.dart';
+import 'package:flutter_project/common/constants/hive_constants.dart';
+import 'package:flutter_project/presentation/cubit/bottom_navigation/bottom_navigation_cubit.dart';
+import 'package:flutter_project/presentation/cubit/counter/counter_cubit.dart';
+import 'package:flutter_project/common/extention/string_extension.dart';
+import 'package:flutter_project/common/extention/theme_extension.dart';
+import 'package:flutter_project/presentation/globals.dart';
+import 'package:flutter_project/presentation/journeys/app_home/app_home_screen.dart';
+import 'package:flutter_project/presentation/journeys/screens/bottom_navbar/bottom_nav_constants.dart';
+import 'package:flutter_project/presentation/journeys/screens/bottom_navbar/nav_title_widget.dart';
+import 'package:flutter_project/presentation/widgets/common_widget.dart';
+import 'package:flutter_project/presentation/utils/app_functions.dart';
 
 abstract class AppHomeWidget extends State<AppHome> {
   late BottomNavigationCubit bottomNavigationCubit;

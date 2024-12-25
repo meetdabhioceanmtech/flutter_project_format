@@ -1,6 +1,6 @@
 import 'package:firebase_analytics/firebase_analytics.dart';
-import 'package:oceanmtech_dmt/presentation/globals.dart';
-import 'package:oceanmtech_dmt/presentation/utils/appsflyer_constants.dart';
+import 'package:flutter_project/presentation/globals.dart';
+import 'package:flutter_project/presentation/utils/appsflyer_constants.dart';
 
 class AnalyticsService {
   static FirebaseAnalytics analytics = FirebaseAnalytics.instance;

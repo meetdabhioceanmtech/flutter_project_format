@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:oceanmtech_dmt/common/constants/translation_constants.dart';
-import 'package:oceanmtech_dmt/presentation/journeys/screens/bottom_navbar/nav_title_widget.dart';
-import 'package:oceanmtech_dmt/presentation/journeys/screens/home/home_screen.dart';
+import 'package:flutter_project/common/constants/translation_constants.dart';
+import 'package:flutter_project/presentation/journeys/screens/bottom_navbar/nav_title_widget.dart';
+import 'package:flutter_project/presentation/journeys/screens/home/home_screen.dart';
 
 List<NavItems> bottomBarItems = const [
   NavItems(

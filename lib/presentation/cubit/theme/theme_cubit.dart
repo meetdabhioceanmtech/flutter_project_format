@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:oceanmtech_dmt/common/constants/theme.dart';
+import 'package:flutter_project/common/constants/theme.dart';
 
 class ThemeCubit extends Cubit<Themes> {
   bool isMounted = true;

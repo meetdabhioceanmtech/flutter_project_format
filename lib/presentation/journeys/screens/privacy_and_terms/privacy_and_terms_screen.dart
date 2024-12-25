@@ -3,13 +3,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_html/flutter_html.dart';
-import 'package:oceanmtech_dmt/common/constants/translation_constants.dart';
-import 'package:oceanmtech_dmt/common/extention/string_extension.dart';
-import 'package:oceanmtech_dmt/di/get_it.dart';
-import 'package:oceanmtech_dmt/presentation/cubit/terms_condition/terms_condition_cubit.dart';
-import 'package:oceanmtech_dmt/presentation/globals.dart';
-import 'package:oceanmtech_dmt/presentation/widgets/common_widget.dart';
-import 'package:oceanmtech_dmt/presentation/widgets/custom_app_bar.dart';
+import 'package:flutter_project/common/constants/translation_constants.dart';
+import 'package:flutter_project/common/extention/string_extension.dart';
+import 'package:flutter_project/di/get_it.dart';
+import 'package:flutter_project/presentation/cubit/terms_condition/terms_condition_cubit.dart';
+import 'package:flutter_project/presentation/globals.dart';
+import 'package:flutter_project/presentation/widgets/common_widget.dart';
+import 'package:flutter_project/presentation/widgets/custom_app_bar.dart';
 import 'package:html/dom.dart' as dom;
 import 'package:html/parser.dart' as htmlparser;
 

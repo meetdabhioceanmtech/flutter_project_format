@@ -4,14 +4,14 @@ import 'package:catcher_2/core/catcher_2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:http/http.dart';
-import 'package:oceanmtech_dmt/common/constants/common_router.dart';
-import 'package:oceanmtech_dmt/common/constants/route_constants.dart';
-import 'package:oceanmtech_dmt/presentation/utils/app_functions.dart';
+import 'package:flutter_project/common/constants/common_router.dart';
+import 'package:flutter_project/common/constants/route_constants.dart';
+import 'package:flutter_project/presentation/utils/app_functions.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:oceanmtech_dmt/common/constants/hive_constants.dart';
-import 'package:oceanmtech_dmt/presentation/globals.dart';
-import 'package:oceanmtech_dmt/presentation/new_notification_service.dart';
-import 'package:oceanmtech_dmt/presentation/widgets/common_widget.dart';
+import 'package:flutter_project/common/constants/hive_constants.dart';
+import 'package:flutter_project/presentation/globals.dart';
+import 'package:flutter_project/presentation/new_notification_service.dart';
+import 'package:flutter_project/presentation/widgets/common_widget.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

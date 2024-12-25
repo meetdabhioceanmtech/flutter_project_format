@@ -2,13 +2,13 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:oceanmtech_dmt/presentation/cubit/bottom_navigation/bottom_navigation_cubit.dart';
-import 'package:oceanmtech_dmt/common/constants/translation_constants.dart';
-import 'package:oceanmtech_dmt/common/extention/string_extension.dart';
-import 'package:oceanmtech_dmt/presentation/globals.dart';
-import 'package:oceanmtech_dmt/presentation/journeys/app_home/app_home_widget.dart';
-import 'package:oceanmtech_dmt/presentation/journeys/screens/bottom_navbar/bottom_nav_constants.dart';
-import 'package:oceanmtech_dmt/presentation/widgets/common_widget.dart';
+import 'package:flutter_project/presentation/cubit/bottom_navigation/bottom_navigation_cubit.dart';
+import 'package:flutter_project/common/constants/translation_constants.dart';
+import 'package:flutter_project/common/extention/string_extension.dart';
+import 'package:flutter_project/presentation/globals.dart';
+import 'package:flutter_project/presentation/journeys/app_home/app_home_widget.dart';
+import 'package:flutter_project/presentation/journeys/screens/bottom_navbar/bottom_nav_constants.dart';
+import 'package:flutter_project/presentation/widgets/common_widget.dart';
 
 class AppHome extends StatefulWidget {
   final bool? check;

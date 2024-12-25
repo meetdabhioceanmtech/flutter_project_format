@@ -1,9 +1,9 @@
 // ignore_for_file: avoid_renaming_method_parameters
 
 import 'package:dartz/dartz.dart';
-import 'package:oceanmtech_dmt/data/datasources/language_local_data_source.dart';
-import 'package:oceanmtech_dmt/data/repositories/app_repository.dart';
-import 'package:oceanmtech_dmt/domain/entities/app_error.dart';
+import 'package:flutter_project/data/datasources/language_local_data_source.dart';
+import 'package:flutter_project/data/repositories/app_repository.dart';
+import 'package:flutter_project/domain/entities/app_error.dart';
 
 class AppRepositoryImpl extends AppRepository {
   final LanguageLocalDataSource languageLocalDataSource;

@@ -7,12 +7,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:oceanmtech_dmt/common/constants/common_router.dart';
-import 'package:oceanmtech_dmt/common/constants/translation_constants.dart';
-import 'package:oceanmtech_dmt/common/extention/size_box_extension.dart';
-import 'package:oceanmtech_dmt/common/extention/string_extension.dart';
-import 'package:oceanmtech_dmt/common/extention/theme_extension.dart';
-import 'package:oceanmtech_dmt/presentation/globals.dart';
+import 'package:flutter_project/common/constants/common_router.dart';
+import 'package:flutter_project/common/constants/translation_constants.dart';
+import 'package:flutter_project/common/extention/size_box_extension.dart';
+import 'package:flutter_project/common/extention/string_extension.dart';
+import 'package:flutter_project/common/extention/theme_extension.dart';
+import 'package:flutter_project/presentation/globals.dart';
 
 class CommonWidget {
   static Widget imageBuilder({

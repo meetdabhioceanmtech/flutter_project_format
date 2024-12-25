@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:oceanmtech_dmt/common/constants/common_router.dart';
-import 'package:oceanmtech_dmt/common/constants/route_constants.dart';
-import 'package:oceanmtech_dmt/common/constants/translation_constants.dart';
-import 'package:oceanmtech_dmt/common/extention/string_extension.dart';
-import 'package:oceanmtech_dmt/common/extention/theme_extension.dart';
-import 'package:oceanmtech_dmt/presentation/cubit/counter/counter_cubit.dart';
-import 'package:oceanmtech_dmt/presentation/globals.dart';
-import 'package:oceanmtech_dmt/presentation/widgets/common_widget.dart';
-import 'package:oceanmtech_dmt/presentation/widgets/custom_app_bar.dart';
+import 'package:flutter_project/common/constants/common_router.dart';
+import 'package:flutter_project/common/constants/route_constants.dart';
+import 'package:flutter_project/common/constants/translation_constants.dart';
+import 'package:flutter_project/common/extention/string_extension.dart';
+import 'package:flutter_project/common/extention/theme_extension.dart';
+import 'package:flutter_project/presentation/cubit/counter/counter_cubit.dart';
+import 'package:flutter_project/presentation/globals.dart';
+import 'package:flutter_project/presentation/widgets/common_widget.dart';
+import 'package:flutter_project/presentation/widgets/custom_app_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

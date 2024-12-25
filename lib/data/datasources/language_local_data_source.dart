@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:hive/hive.dart';
-import 'package:oceanmtech_dmt/common/constants/hive_constants.dart';
+import 'package:flutter_project/common/constants/hive_constants.dart';
 
 abstract class LanguageLocalDataSource {
   Future<void> updateLanguage(String languageCode);

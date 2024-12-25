@@ -1,4 +1,4 @@
-# oceanmtech_dmt
+# flutter_project
 
 A new Flutter project.
 
@@ -44,7 +44,7 @@ A new Flutter project.
 - 'https://bakery.oceanapplications.com/link?s=sProduct&code=${userLoginData?.id}'
 
 ## APK Size
-- Basic Project Time APK Size : (27.5MB)
+- Basic Project Time APK Size : (38.8MB)
 
 ## Platform
 - Andorid

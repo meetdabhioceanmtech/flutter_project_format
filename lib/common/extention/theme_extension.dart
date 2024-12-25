@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:oceanmtech_dmt/presentation/globals.dart';
+import 'package:flutter_project/presentation/globals.dart';
 
 extension ThemeTextExtentions on TextTheme {
 // H1

@@ -1,9 +1,9 @@
 import 'dart:isolate';
 
 import 'package:flutter/material.dart';
-import 'package:oceanmtech_dmt/common/constants/hive_constants.dart';
-import 'package:oceanmtech_dmt/main.dart';
-import 'package:oceanmtech_dmt/presentation/globals.dart';
+import 'package:flutter_project/common/constants/hive_constants.dart';
+import 'package:flutter_project/main.dart';
+import 'package:flutter_project/presentation/globals.dart';
 
 int currentTime = 0;
 String currentScreen = '';

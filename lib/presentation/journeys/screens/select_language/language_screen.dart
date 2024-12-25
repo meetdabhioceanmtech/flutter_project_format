@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:oceanmtech_dmt/common/constants/languages.dart';
-import 'package:oceanmtech_dmt/common/constants/translation_constants.dart';
-import 'package:oceanmtech_dmt/common/extention/string_extension.dart';
-import 'package:oceanmtech_dmt/presentation/cubit/app_language/app_language_cubit.dart';
-import 'package:oceanmtech_dmt/presentation/cubit/language/language_cubit.dart';
-import 'package:oceanmtech_dmt/presentation/globals.dart';
-import 'package:oceanmtech_dmt/presentation/journeys/screens/select_language/language_widget.dart';
-import 'package:oceanmtech_dmt/presentation/widgets/common_widget.dart';
-import 'package:oceanmtech_dmt/presentation/widgets/custom_app_bar.dart';
+import 'package:flutter_project/common/constants/languages.dart';
+import 'package:flutter_project/common/constants/translation_constants.dart';
+import 'package:flutter_project/common/extention/string_extension.dart';
+import 'package:flutter_project/presentation/cubit/app_language/app_language_cubit.dart';
+import 'package:flutter_project/presentation/cubit/language/language_cubit.dart';
+import 'package:flutter_project/presentation/globals.dart';
+import 'package:flutter_project/presentation/journeys/screens/select_language/language_widget.dart';
+import 'package:flutter_project/presentation/widgets/common_widget.dart';
+import 'package:flutter_project/presentation/widgets/custom_app_bar.dart';
 
 class LanguageScreen extends StatefulWidget {
   const LanguageScreen({super.key});

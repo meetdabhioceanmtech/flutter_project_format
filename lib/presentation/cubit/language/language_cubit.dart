@@ -4,11 +4,11 @@ import 'dart:ui';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:oceanmtech_dmt/domain/entities/app_error.dart';
-import 'package:oceanmtech_dmt/domain/params/no_params.dart';
-import 'package:oceanmtech_dmt/domain/usecases/get_preferred_language.dart';
-import 'package:oceanmtech_dmt/domain/usecases/update_language.dart';
-import 'package:oceanmtech_dmt/presentation/globals.dart';
+import 'package:flutter_project/domain/entities/app_error.dart';
+import 'package:flutter_project/domain/params/no_params.dart';
+import 'package:flutter_project/domain/usecases/get_preferred_language.dart';
+import 'package:flutter_project/domain/usecases/update_language.dart';
+import 'package:flutter_project/presentation/globals.dart';
 
 part 'language_state.dart';
 

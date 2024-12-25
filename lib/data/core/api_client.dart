@@ -6,8 +6,8 @@ import 'dart:developer';
 import 'package:dio/dio.dart' as dio;
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
-import 'package:oceanmtech_dmt/data/core/api_constants.dart';
-import 'package:oceanmtech_dmt/data/core/unathorised_exception.dart';
+import 'package:flutter_project/data/core/api_constants.dart';
+import 'package:flutter_project/data/core/unathorised_exception.dart';
 
 class ApiClient {
   final http.Client _client;

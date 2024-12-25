@@ -4,8 +4,8 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dart_ping/dart_ping.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:oceanmtech_dmt/presentation/custom_snackbar.dart';
-import 'package:oceanmtech_dmt/presentation/globals.dart';
+import 'package:flutter_project/presentation/custom_snackbar.dart';
+import 'package:flutter_project/presentation/globals.dart';
 
 void listenConnection() {
   connectivitySubscription = Connectivity().onConnectivityChanged.listen(
