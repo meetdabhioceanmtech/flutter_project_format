@@ -44,168 +44,177 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: CommonWidget.padding(
-          horizontal: 15,
-          vertical: 20,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Center(
-                child: CommonWidget.imageBuilder(
-                  image: "assets/svgs/common/login_image.svg",
-                  height: 170.h,
-                ),
-              ),
-              30.sHeight,
-              CommonWidget.commonText(
-                text: TranslationConstants.login.translate(context),
-                style: Theme.of(context).textTheme.h6BoldHeading.copyWith(
-                      color: appConstants.primary1Color,
-                    ),
-              ),
-              8.sHeight,
-              CommonWidget.commonText(
-                text: TranslationConstants.job_search_helps_you_hire_staff_in_2_days.translate(context),
-                maxLines: 2,
-                style: Theme.of(context).textTheme.body2MediumHeading.copyWith(
-                      color: appConstants.primary1Color,
-                    ),
-              ),
-              30.sHeight,
-              Form(
-                key: loginKey,
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    CommonWidget.field(
-                      context: context,
-                      controller: emailController,
-                      fieldTitle: TranslationConstants.email_address.translate(context),
-                      textInputType: TextInputType.emailAddress,
-                      hintText: TranslationConstants.enter_email_address.translate(context),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return TranslationConstants.please_enter_your_email_id.translate(context);
-                        } else if (!value.trim().isValidEmail()) {
-                          return TranslationConstants.please_enter_valid_email_id.translate(context);
-                        }
-                        return null;
-                      },
-                    ),
-                    BlocBuilder<ToggleCubit, bool>(
-                      bloc: toggleCubit,
-                      builder: (context, state) {
-                        return CommonWidget.field(
-                          context: context,
-                          controller: passwordController,
-                          fieldTitle: TranslationConstants.password.translate(context),
-                          textInputType: TextInputType.visiblePassword,
-                          textInputAction: TextInputAction.send,
-                          obscureText: state,
-                          hintText: TranslationConstants.enter_your_password.translate(context),
-                          suffixWidget: IconButton(
-                            highlightColor: Colors.transparent,
-                            onPressed: () => toggleCubit.setValue(value: !state),
-                            icon: Icon(
-                              state ? Icons.visibility_off : Icons.visibility,
-                            ),
-                          ),
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return TranslationConstants.please_enter_your_password.translate(context);
-                            } else if (value.length < 6) {
-                              return TranslationConstants.password_must_be_at_least_6_characters_long
-                                  .translate(context);
-                            }
-
-                            return null;
-                          },
-                        );
-                      },
-                    ),
-                  ],
-                ),
-              ),
-              10.sHeight,
-              Align(
-                alignment: Alignment.centerRight,
-                child: InkWell(
-                  // onTap: () async => await CommonRouter.pushNamed(RouteList.forgot_screen),
-                  highlightColor: Colors.transparent,
-                  splashColor: Colors.transparent,
-                  child: CommonWidget.commonText(
-                    textAlign: TextAlign.center,
-                    text: TranslationConstants.forgot_password_question.translate(context),
-                    color: appConstants.primary1Color,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w600,
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: CommonWidget.padding(
+            horizontal: 15,
+            vertical: 20,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Center(
+                  child: CommonWidget.imageBuilder(
+                    image: "assets/svgs/common/login_image.svg",
+                    height: 170.h,
                   ),
                 ),
-              ),
-              25.sHeight,
-              CommonWidget.commonButton(
-                text: TranslationConstants.login.translate(context),
-                context: context,
-                onTap: () async => await CommonRouter.pushNamed(RouteList.privacy_and_terms_screen),
-              ),
-              20.sHeight,
-              InkWell(
-                onTap: () async => await CommonRouter.pushNamed(RouteList.notification_screen),
-                child: CommonWidget.commonText(
-                  text: 1 == 1 ? "Notification Screen" : TranslationConstants.sign_up.translate(context),
-                  style: Theme.of(context).textTheme.body2SemiboldHeading.copyWith(
+                30.sHeight,
+                CommonWidget.commonText(
+                  text: TranslationConstants.login.translate(context),
+                  style: Theme.of(context).textTheme.h6BoldHeading.copyWith(
                         color: appConstants.primary1Color,
                       ),
                 ),
-              ),
-              20.sHeight,
-              InkWell(
-                onTap: () async {},
-                child: CommonWidget.commonText(
-                  text: 1 == 1 ? "Image Crop Screen" : TranslationConstants.sign_up.translate(context),
-                  style: Theme.of(context).textTheme.body2SemiboldHeading.copyWith(
+                8.sHeight,
+                CommonWidget.commonText(
+                  text: TranslationConstants.job_search_helps_you_hire_staff_in_2_days.translate(context),
+                  maxLines: 2,
+                  style: Theme.of(context).textTheme.body2MediumHeading.copyWith(
                         color: appConstants.primary1Color,
                       ),
                 ),
-              ),
-              20.sHeight,
-              InkWell(
-                onTap: () async => await CommonRouter.pushNamed(
-                  RouteList.privacy_and_terms_screen,
-                  arguments: TypeScreen.PRIVACY_CONDITION,
-                ),
-                child: CommonWidget.commonText(
-                  text: 1 == 1 ? "Privacy And Terms Screen" : TranslationConstants.sign_up.translate(context),
-                  style: Theme.of(context).textTheme.body2SemiboldHeading.copyWith(
-                        color: appConstants.primary1Color,
+                30.sHeight,
+                Form(
+                  key: loginKey,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CommonWidget.field(
+                        context: context,
+                        controller: emailController,
+                        fieldTitle: TranslationConstants.email_address.translate(context),
+                        textInputType: TextInputType.emailAddress,
+                        hintText: TranslationConstants.enter_email_address.translate(context),
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return TranslationConstants.please_enter_your_email_id.translate(context);
+                          } else if (!value.trim().isValidEmail()) {
+                            return TranslationConstants.please_enter_valid_email_id.translate(context);
+                          }
+                          return null;
+                        },
                       ),
-                ),
-              ),
-              20.sHeight,
-              InkWell(
-                onTap: () async => await CommonRouter.pushNamed(RouteList.language_screen),
-                child: CommonWidget.commonText(
-                  text: 1 == 1 ? "Language Screen" : TranslationConstants.sign_up.translate(context),
-                  style: Theme.of(context).textTheme.body2SemiboldHeading.copyWith(
-                        color: appConstants.primary1Color,
+                      BlocBuilder<ToggleCubit, bool>(
+                        bloc: toggleCubit,
+                        builder: (context, state) {
+                          return CommonWidget.field(
+                            context: context,
+                            controller: passwordController,
+                            fieldTitle: TranslationConstants.password.translate(context),
+                            textInputType: TextInputType.visiblePassword,
+                            textInputAction: TextInputAction.send,
+                            obscureText: state,
+                            hintText: TranslationConstants.enter_your_password.translate(context),
+                            suffixWidget: IconButton(
+                              highlightColor: Colors.transparent,
+                              onPressed: () => toggleCubit.setValue(value: !state),
+                              icon: Icon(
+                                state ? Icons.visibility_off : Icons.visibility,
+                              ),
+                            ),
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return TranslationConstants.please_enter_your_password.translate(context);
+                              } else if (value.length < 6) {
+                                return TranslationConstants.password_must_be_at_least_6_characters_long
+                                    .translate(context);
+                              }
+
+                              return null;
+                            },
+                          );
+                        },
                       ),
+                    ],
+                  ),
                 ),
-              ),
-              20.sHeight,
-              InkWell(
-                onTap: () => FirebaseCrashlytics.instance.crash(),
-                child: CommonWidget.commonText(
-                  text: 'FirebaseCrashlytics Test',
-                  style: Theme.of(context).textTheme.body2SemiboldHeading.copyWith(
-                        color: appConstants.primary1Color,
-                      ),
+                10.sHeight,
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: InkWell(
+                    // onTap: () async => await CommonRouter.pushNamed(RouteList.forgot_screen),
+                    highlightColor: Colors.transparent,
+                    splashColor: Colors.transparent,
+                    child: CommonWidget.commonText(
+                      textAlign: TextAlign.center,
+                      text: TranslationConstants.forgot_password_question.translate(context),
+                      color: appConstants.primary1Color,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
                 ),
-              ),
-              20.sHeight,
-            ],
+                25.sHeight,
+                CommonWidget.commonButton(
+                  text: TranslationConstants.login.translate(context),
+                  context: context,
+                  onTap: () async => await CommonRouter.pushNamed(RouteList.privacy_and_terms_screen),
+                ),
+                20.sHeight,
+                InkWell(
+                  onTap: () async => await CommonRouter.pushNamed(RouteList.notification_screen),
+                  child: CommonWidget.commonText(
+                    text: 1 == 1 ? "Notification Screen" : TranslationConstants.sign_up.translate(context),
+                    style: Theme.of(context).textTheme.body2SemiboldHeading.copyWith(
+                          color: appConstants.primary1Color,
+                        ),
+                  ),
+                ),
+                20.sHeight,
+                InkWell(
+                  onTap: () async {
+                    ImageCropArgs cropArgs = ImageCropArgs(
+                      imagePathOrURL:
+                          'https://gratisography.com/wp-content/uploads/2025/03/gratisography-vintage-robot-1036x780.jpg',
+                      aspectRatio: 0,
+                    );
+                    await CommonRouter.pushNamed(RouteList.image_crop_screen, arguments: cropArgs);
+                  },
+                  child: CommonWidget.commonText(
+                    text: 1 == 1 ? "Image Crop Screen" : TranslationConstants.sign_up.translate(context),
+                    style: Theme.of(context).textTheme.body2SemiboldHeading.copyWith(
+                          color: appConstants.primary1Color,
+                        ),
+                  ),
+                ),
+                20.sHeight,
+                InkWell(
+                  onTap: () async => await CommonRouter.pushNamed(
+                    RouteList.privacy_and_terms_screen,
+                    arguments: TypeScreen.PRIVACY_CONDITION,
+                  ),
+                  child: CommonWidget.commonText(
+                    text: 1 == 1 ? "Privacy And Terms Screen" : TranslationConstants.sign_up.translate(context),
+                    style: Theme.of(context).textTheme.body2SemiboldHeading.copyWith(
+                          color: appConstants.primary1Color,
+                        ),
+                  ),
+                ),
+                20.sHeight,
+                InkWell(
+                  onTap: () async => await CommonRouter.pushNamed(RouteList.language_screen),
+                  child: CommonWidget.commonText(
+                    text: 1 == 1 ? "Language Screen" : TranslationConstants.sign_up.translate(context),
+                    style: Theme.of(context).textTheme.body2SemiboldHeading.copyWith(
+                          color: appConstants.primary1Color,
+                        ),
+                  ),
+                ),
+                20.sHeight,
+                InkWell(
+                  onTap: () => FirebaseCrashlytics.instance.crash(),
+                  child: CommonWidget.commonText(
+                    text: 'FirebaseCrashlytics Test',
+                    style: Theme.of(context).textTheme.body2SemiboldHeading.copyWith(
+                          color: appConstants.primary1Color,
+                        ),
+                  ),
+                ),
+                20.sHeight,
+              ],
+            ),
           ),
         ),
       ),

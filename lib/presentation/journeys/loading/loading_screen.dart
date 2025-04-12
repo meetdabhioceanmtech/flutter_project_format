@@ -17,10 +17,12 @@ class LoadingScreen extends StatelessWidget {
     return Stack(
       fit: StackFit.expand,
       children: [
-        Container(
-          color: appConstants.primary1Color,
-          child: SafeArea(top: true, left: true, right: true, bottom: false, child: screen),
-        ),
+        1 == 1
+            ? screen
+            : Container(
+                color: appConstants.primary1Color,
+                child: SafeArea(top: true, left: true, right: true, bottom: false, child: screen),
+              ),
         BlocBuilder<LoadingCubit, bool>(
           builder: (context, shouldShow) {
             if (shouldShow) {

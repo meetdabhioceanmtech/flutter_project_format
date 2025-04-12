@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_project/common/constants/translation_constants.dart';
 import 'package:flutter_project/common/extention/string_extension.dart';
 import 'package:flutter_project/common/extention/theme_extension.dart';
@@ -33,10 +32,7 @@ class _CropImageScreenState extends CropImageWidget {
       ),
       body: Container(
         color: appConstants.whiteBackgroundColor,
-        child: Padding(
-          padding: EdgeInsets.all(8.r),
-          child: Center(child: buildImage()),
-        ),
+        child: Center(child: buildImage()),
       ),
       bottomNavigationBar: buildButtons(),
     );
