@@ -72,32 +72,32 @@ class AppConstants {
 
   void loadLight() {
     primary1Color = _primaryColor;
-    primary2Color = _primaryColor.withOpacity(0.80);
-    primary3Color = _primaryColor.withOpacity(0.60);
-    primary4Color = _primaryColor.withOpacity(0.40);
-    primary5Color = _primaryColor.withOpacity(0.30);
-    primary6Color = _primaryColor.withOpacity(0.20);
-    primary7Color = _primaryColor.withOpacity(0.10);
-    primary8Color = _primaryColor.withOpacity(0.05);
+    primary2Color = _primaryColor.withValues(alpha: 0.80);
+    primary3Color = _primaryColor.withValues(alpha: 0.60);
+    primary4Color = _primaryColor.withValues(alpha: 0.40);
+    primary5Color = _primaryColor.withValues(alpha: 0.30);
+    primary6Color = _primaryColor.withValues(alpha: 0.20);
+    primary7Color = _primaryColor.withValues(alpha: 0.10);
+    primary8Color = _primaryColor.withValues(alpha: 0.05);
 
     secondary1Color = _secondaryColor;
-    secondary2Color = _secondaryColor.withOpacity(0.80);
-    secondary3Color = _secondaryColor.withOpacity(0.60);
-    secondary4Color = _secondaryColor.withOpacity(0.40);
-    secondary5Color = _secondaryColor.withOpacity(0.30);
-    secondary6Color = _secondaryColor.withOpacity(0.20);
-    secondary7Color = _secondaryColor.withOpacity(0.10);
+    secondary2Color = _secondaryColor.withValues(alpha: 0.80);
+    secondary3Color = _secondaryColor.withValues(alpha: 0.60);
+    secondary4Color = _secondaryColor.withValues(alpha: 0.40);
+    secondary5Color = _secondaryColor.withValues(alpha: 0.30);
+    secondary6Color = _secondaryColor.withValues(alpha: 0.20);
+    secondary7Color = _secondaryColor.withValues(alpha: 0.10);
     secondary8Color = Colors.white;
 
     neutral1Color = _neutralColor;
-    neutral2Color = _neutralColor.withOpacity(0.90);
-    neutral3Color = _neutralColor.withOpacity(0.80);
-    neutral4Color = _neutralColor.withOpacity(0.70);
-    neutral5Color = _neutralColor.withOpacity(0.60);
-    neutral6Color = _neutralColor.withOpacity(0.50);
-    neutral7Color = _neutralColor.withOpacity(0.40);
-    neutral8Color = _neutralColor.withOpacity(0.30);
-    neutral9Color = _neutralColor.withOpacity(0.20);
+    neutral2Color = _neutralColor.withValues(alpha: 0.90);
+    neutral3Color = _neutralColor.withValues(alpha: 0.80);
+    neutral4Color = _neutralColor.withValues(alpha: 0.70);
+    neutral5Color = _neutralColor.withValues(alpha: 0.60);
+    neutral6Color = _neutralColor.withValues(alpha: 0.50);
+    neutral7Color = _neutralColor.withValues(alpha: 0.40);
+    neutral8Color = _neutralColor.withValues(alpha: 0.30);
+    neutral9Color = _neutralColor.withValues(alpha: 0.20);
     neutral10Color = Colors.white;
 
     whiteBackgroundColor = Colors.white;
@@ -111,22 +111,22 @@ class AppConstants {
 
   void loadDark() {
     primary1Color = _primaryColor;
-    primary2Color = _primaryColor.withOpacity(0.50);
-    primary3Color = _primaryColor.withOpacity(0.41);
+    primary2Color = _primaryColor.withValues(alpha: 0.50);
+    primary3Color = _primaryColor.withValues(alpha: 0.41);
 
     secondary1Color = _secondaryColor;
-    secondary2Color = _secondaryColor.withOpacity(0.50);
+    secondary2Color = _secondaryColor.withValues(alpha: 0.50);
 
     neutral1Color = _neutralColor;
-    neutral2Color = _neutralColor.withOpacity(0.70);
-    neutral3Color = _neutralColor.withOpacity(0.60);
-    neutral4Color = _neutralColor.withOpacity(0.41);
-    neutral5Color = _neutralColor.withOpacity(0.30);
-    neutral6Color = _neutralColor.withOpacity(0.17);
-    neutral7Color = _neutralColor.withOpacity(0.14);
-    neutral8Color = _neutralColor.withOpacity(0.11);
-    neutral9Color = _neutralColor.withOpacity(0.08);
-    neutral10Color = _neutralColor.withOpacity(0.06);
+    neutral2Color = _neutralColor.withValues(alpha: 0.70);
+    neutral3Color = _neutralColor.withValues(alpha: 0.60);
+    neutral4Color = _neutralColor.withValues(alpha: 0.41);
+    neutral5Color = _neutralColor.withValues(alpha: 0.30);
+    neutral6Color = _neutralColor.withValues(alpha: 0.17);
+    neutral7Color = _neutralColor.withValues(alpha: 0.14);
+    neutral8Color = _neutralColor.withValues(alpha: 0.11);
+    neutral9Color = _neutralColor.withValues(alpha: 0.08);
+    neutral10Color = _neutralColor.withValues(alpha: 0.06);
 
     redColor = _red;
     greenColor = _green;

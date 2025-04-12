@@ -1,6 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 
-class ApiEndPointConstants {
+class EnvConstants {
+  static String DISCORD_WEBHOOK_URL = 'DISCORD_WEBHOOK_URL';
   static String API_ENDPOINT_1 = 'API_ENDPOINT_1';
   static String API_ENDPOINT_2 = 'API_ENDPOINT_2'; // Get App Languages
   static String API_ENDPOINT_3 = 'API_ENDPOINT_3'; // Language Labels Get

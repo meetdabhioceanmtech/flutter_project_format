@@ -59,9 +59,9 @@ class AppFunctions {
       return;
     }
     try {
-      if (isJobSearchBox) {
-        jobSearchBox.clear();
-        isJobSearchBox = false;
+      if (isAppBox) {
+        appBox.clear();
+        isAppBox = false;
       }
       if (isAppLanBox) {
         appLanBox.clear();
@@ -85,7 +85,7 @@ class AppFunctions {
         isAppActivityAnaltics = false;
       }
 
-      jobSearchBox.put(HiveConstants.IS_FIRST_LOAD, false);
+      appBox.put(HiveConstants.IS_FIRST_LOAD, false);
 
       userEntity = null;
     } on Exception catch (e) {
@@ -176,11 +176,11 @@ class AppFunctions {
       if (Platform.isAndroid) {
         var data = await deviceInfoPlugin.androidInfo;
         deviceData = await _readAnroidDeviceInfo(data);
-        await jobSearchBox.put(HiveConstants.DEVICE_DATA, deviceData);
+        await appBox.put(HiveConstants.DEVICE_DATA, deviceData);
       } else if (Platform.isIOS) {
         var data = await deviceInfoPlugin.iosInfo;
         deviceData = _readIosDeviceInfo(data);
-        await jobSearchBox.put(HiveConstants.DEVICE_DATA, deviceData);
+        await appBox.put(HiveConstants.DEVICE_DATA, deviceData);
       }
     } on PlatformException {
       deviceData = <String, String>{
@@ -190,7 +190,7 @@ class AppFunctions {
         'device_id': deviceNotificationToken.toString().isEmpty ? 'notfound' : deviceNotificationToken.toString(),
         'unique_id': "notfound",
       };
-      await jobSearchBox.put(HiveConstants.DEVICE_DATA, deviceData);
+      await appBox.put(HiveConstants.DEVICE_DATA, deviceData);
     }
     if (kDebugMode) {
       // print(deviceData);

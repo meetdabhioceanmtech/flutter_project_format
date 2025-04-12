@@ -41,7 +41,11 @@ class MyRouteObserver extends RouteObserver<PageRoute<dynamic>> {
     Future.microtask(() async {
       routeIsolate = await Isolate.spawn(
         computeIsolate,
-        Message(sendPort: routingIsolateReceivePort.sendPort, message: newRouteName, oldDuration: oldDuration),
+        Message(
+          sendPort: routingIsolateReceivePort.sendPort,
+          message: newRouteName,
+          oldDuration: oldDuration,
+        ),
       );
     });
   }
@@ -49,8 +53,10 @@ class MyRouteObserver extends RouteObserver<PageRoute<dynamic>> {
   void _sendScreenView(PageRoute<dynamic> route) {
     var screenName = route.settings.name;
 
+    trackEvent(route: route);
+
     navigationCount = navigationCount + 1;
-    jobSearchBox.put(HiveConstants.NAV_NUMBER, navigationCount);
+    appBox.put(HiveConstants.NAV_NUMBER, navigationCount);
 
     // DefaultCacheManager().store.emptyMemoryCache();
 
@@ -81,5 +87,15 @@ class MyRouteObserver extends RouteObserver<PageRoute<dynamic>> {
     if (previousRoute is PageRoute && route is PageRoute) {
       _sendScreenView(previousRoute);
     }
+  }
+
+  void trackEvent({required PageRoute route}) {
+    String screenName = route.settings.name ?? "";
+
+    handleTrackEvent(screenName: screenName, arguments: route.settings.arguments);
+  }
+
+  void handleTrackEvent({required String screenName, Object? arguments}) {
+    //Analytics Track Impliment Ex. mixpanelAnalytics, Etc.
   }
 }

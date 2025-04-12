@@ -14,8 +14,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 final GlobalKey<ScaffoldMessengerState> snackbarKey = GlobalKey<ScaffoldMessengerState>();
 
-late Box jobSearchBox;
-bool isJobSearchBox = false;
+late Box appBox;
+bool isAppBox = false;
 late Box appLanBox;
 bool isAppLanBox = false;
 late Box userDataBox;

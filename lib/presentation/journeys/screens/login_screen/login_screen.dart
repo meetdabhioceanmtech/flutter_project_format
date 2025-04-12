@@ -1,6 +1,10 @@
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_project/common/constants/common_router.dart';
+import 'package:flutter_project/common/constants/route_constants.dart';
+import 'package:flutter_project/presentation/journeys/screens/image_crop/image_crop_args.dart';
+import 'package:flutter_project/presentation/journeys/screens/privacy_and_terms/privacy_and_terms_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_project/common/constants/translation_constants.dart';
 import 'package:flutter_project/common/extention/size_box_extension.dart';
@@ -46,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
           horizontal: 15,
           vertical: 20,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Center(
                 child: CommonWidget.imageBuilder(
@@ -145,46 +149,62 @@ class _LoginScreenState extends State<LoginScreen> {
               CommonWidget.commonButton(
                 text: TranslationConstants.login.translate(context),
                 context: context,
-                // onTap: () async {
-                //   // if (loginKey.currentState!.validate()) {
-                //   //   await loginCubit.login(
-                //   //     context: context,
-                //   //     email: emailController.text.toString().toLowerCase().trim(),
-                //   //     password: passwordController.text.toString(),
-                //   //   );
-                //   // }
-                // },
-                // onTap: () => throw Exception(),
+                onTap: () async => await CommonRouter.pushNamed(RouteList.privacy_and_terms_screen),
+              ),
+              20.sHeight,
+              InkWell(
+                onTap: () async => await CommonRouter.pushNamed(RouteList.notification_screen),
+                child: CommonWidget.commonText(
+                  text: 1 == 1 ? "Notification Screen" : TranslationConstants.sign_up.translate(context),
+                  style: Theme.of(context).textTheme.body2SemiboldHeading.copyWith(
+                        color: appConstants.primary1Color,
+                      ),
+                ),
+              ),
+              20.sHeight,
+              InkWell(
+                onTap: () async {},
+                child: CommonWidget.commonText(
+                  text: 1 == 1 ? "Image Crop Screen" : TranslationConstants.sign_up.translate(context),
+                  style: Theme.of(context).textTheme.body2SemiboldHeading.copyWith(
+                        color: appConstants.primary1Color,
+                      ),
+                ),
+              ),
+              20.sHeight,
+              InkWell(
+                onTap: () async => await CommonRouter.pushNamed(
+                  RouteList.privacy_and_terms_screen,
+                  arguments: TypeScreen.PRIVACY_CONDITION,
+                ),
+                child: CommonWidget.commonText(
+                  text: 1 == 1 ? "Privacy And Terms Screen" : TranslationConstants.sign_up.translate(context),
+                  style: Theme.of(context).textTheme.body2SemiboldHeading.copyWith(
+                        color: appConstants.primary1Color,
+                      ),
+                ),
+              ),
+              20.sHeight,
+              InkWell(
+                onTap: () async => await CommonRouter.pushNamed(RouteList.language_screen),
+                child: CommonWidget.commonText(
+                  text: 1 == 1 ? "Language Screen" : TranslationConstants.sign_up.translate(context),
+                  style: Theme.of(context).textTheme.body2SemiboldHeading.copyWith(
+                        color: appConstants.primary1Color,
+                      ),
+                ),
+              ),
+              20.sHeight,
+              InkWell(
                 onTap: () => FirebaseCrashlytics.instance.crash(),
+                child: CommonWidget.commonText(
+                  text: 'FirebaseCrashlytics Test',
+                  style: Theme.of(context).textTheme.body2SemiboldHeading.copyWith(
+                        color: appConstants.primary1Color,
+                      ),
+                ),
               ),
-              15.sHeight,
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  CommonWidget.commonText(
-                    text: TranslationConstants.you_dont_have_an_account.translate(context),
-                    style: Theme.of(context).textTheme.caption1MediumHeading.copyWith(
-                          color: appConstants.neutral1Color,
-                        ),
-                  ),
-                  4.sWidth,
-                  InkWell(
-                    // onTap: () async => await CommonRouter.pushNamed(
-                    //   RouteList.register_Screen,
-                    //   arguments: const RegisterCompanyParams(
-                    //     registerOrEditEnum: RegisterOrEdit.register,
-                    //     userEntity: null,
-                    //   ),
-                    // ),
-                    child: CommonWidget.commonText(
-                      text: TranslationConstants.sign_up.translate(context),
-                      style: Theme.of(context).textTheme.body2SemiboldHeading.copyWith(
-                            color: appConstants.primary1Color,
-                          ),
-                    ),
-                  ),
-                ],
-              ),
+              20.sHeight,
             ],
           ),
         ),

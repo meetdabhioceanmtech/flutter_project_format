@@ -50,7 +50,7 @@ class CustomSnackbar {
       ),
       backgroundColor: bgColor ??
           (snackbarType == SnackbarType.ERROR
-              ? Colors.red.withOpacity(0.9)
+              ? Colors.red.withValues(alpha: 0.9)
               : snackbarType == SnackbarType.PROCESSING
                   ? Colors.green[900]
                   : appConstants.primary1Color),
@@ -142,7 +142,7 @@ class CustomSnackbar {
       ),
       backgroundColor: bgColor ??
           (snackbarType == SnackbarType.ERROR
-              ? Colors.red.withOpacity(0.9)
+              ? Colors.red.withValues(alpha: 0.9)
               : snackbarType == SnackbarType.PROCESSING
                   ? Colors.green[900]
                   : appConstants.primary1Color),

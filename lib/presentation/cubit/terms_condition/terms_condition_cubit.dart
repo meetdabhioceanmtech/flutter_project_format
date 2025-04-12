@@ -20,9 +20,8 @@ class TermsConditionCubit extends Cubit<TermsConditionState> {
   TermsConditionCubit({required this.apiUsecase, required this.loadingCubit}) : super(TermsConditionLoadingState());
 
   Future<void> termsCondition<T extends ModelResponseExtend>({required TypeScreen typeScreen}) async {
-    final endpoint = dotenv.env[typeScreen == TypeScreen.PRIVACY_CONDITION
-        ? ApiEndPointConstants.API_ENDPOINT_5
-        : ApiEndPointConstants.API_ENDPOINT_6];
+    final endpoint = dotenv
+        .env[typeScreen == TypeScreen.PRIVACY_CONDITION ? EnvConstants.API_ENDPOINT_5 : EnvConstants.API_ENDPOINT_6];
     if (endpoint == null) return;
 
     emit(TermsConditionLoadingState());

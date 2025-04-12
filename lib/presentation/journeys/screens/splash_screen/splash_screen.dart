@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Future<void> setImageInLocal() async {
-    splashUrl = await jobSearchBox.get(HiveConstants.SPLASH_IMAGE_PATH) ?? "";
+    splashUrl = await appBox.get(HiveConstants.SPLASH_IMAGE_PATH) ?? "";
     if (splashUrl.isEmpty || splashUrl == 'null') return;
     final directory = '${(await getApplicationDocumentsDirectory()).path}${Platform.pathSeparator}splash';
     File file = File('$directory${Platform.pathSeparator}${splashUrl.split('/').last}');

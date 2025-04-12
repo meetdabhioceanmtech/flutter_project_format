@@ -31,6 +31,7 @@ abstract class CropImageWidget extends State<CropImageScreen> with WidgetsBindin
     } else {
       provider = ExtendedFileImageProvider(File(widget.cropArgs.imagePathOrURL), cacheRawData: true);
     }
+
     super.initState();
   }
 
@@ -174,7 +175,7 @@ abstract class CropImageWidget extends State<CropImageScreen> with WidgetsBindin
     //// print('image_editor time : $diff');
     // showToast('handle duration: $diff', duration: const Duration(seconds: 5), dismissOtherToast: true);
     if (result == null) return;
-    
+
     if (!context.mounted) return;
     Navigator.of(context).pop(result);
   }

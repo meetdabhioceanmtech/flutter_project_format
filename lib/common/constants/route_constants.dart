@@ -7,7 +7,6 @@ class RouteList {
   static const String login_screen = "/login_screen";
   static const String image_crop_screen = "/image_crop_screen";
   static const String privacy_and_terms_screen = "/privacy_and_terms_screen";
-  static const String map_location_picker = "/map_location_picker";
   static const String language_screen = "/language_screen";
   static const String notification_screen = "/notification_screen";
 }

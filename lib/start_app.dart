@@ -27,21 +27,19 @@ import 'package:flutter_project/presentation/globals.dart';
 import 'package:flutter_project/presentation/journeys/loading/loading_screen.dart';
 import 'package:flutter_project/presentation/new_notification_service.dart';
 import 'package:flutter_project/presentation/routes.dart';
-import 'package:flutter_project/presentation/utils/analytics_service.dart';
 import 'package:flutter_project/presentation/utils/app_functions.dart';
-import 'package:flutter_project/presentation/utils/my_route_observor.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 enum DeviceType { phone, tablet }
 
-class JobSearchApp extends StatefulWidget {
-  const JobSearchApp({super.key});
+class StartApp extends StatefulWidget {
+  const StartApp({super.key});
 
   @override
-  State<JobSearchApp> createState() => _JobSearchAppState();
+  State<StartApp> createState() => _StartAppState();
 }
 
-class _JobSearchAppState extends State<JobSearchApp> {
+class _StartAppState extends State<StartApp> {
   late LanguageCubit _languageCubit;
   late LoadingCubit _loadingCubit;
   late ThemeCubit _themeCubit;
@@ -240,8 +238,8 @@ class _JobSearchAppState extends State<JobSearchApp> {
                         scaffoldMessengerKey: snackbarKey,
                         navigatorKey: Catcher2.navigatorKey,
                         navigatorObservers: <NavigatorObserver>[
-                          AnalyticsService.getAnalyticsObserver(),
-                          MyRouteObserver(),
+                          // AnalyticsService.getAnalyticsObserver(), //Firebase Analytics
+                          // MyRouteObserver(), //User Screen Time Coutner and Analytics
                         ],
                         theme: ThemeData(
                           fontFamily: 'Poppins',
@@ -251,7 +249,7 @@ class _JobSearchAppState extends State<JobSearchApp> {
                           primaryColor: appConstants.primary1Color,
                           textSelectionTheme: TextSelectionThemeData(
                             selectionHandleColor: Colors.transparent,
-                            selectionColor: appConstants.primary1Color.withOpacity(0.3),
+                            selectionColor: appConstants.primary1Color.withValues(alpha: 0.3),
                             cursorColor: appConstants.primary1Color,
                           ),
                           highlightColor: Colors.transparent,

@@ -41,7 +41,7 @@ class AppLanguageCubit extends Cubit<AppLanguageState> {
     if (!isMounted) return;
 
     emit(const AppLanguageLoadingState());
-    final endpoint = dotenv.env[ApiEndPointConstants.API_ENDPOINT_2];
+    final endpoint = dotenv.env[EnvConstants.API_ENDPOINT_2];
     if (endpoint == null) return;
     Either<AppError, T> response = await apiUsecase.call(
       endpoint: endpoint + ApiConstatnts.salt,
@@ -127,7 +127,7 @@ class AppLanguageCubit extends Cubit<AppLanguageState> {
 
     emit(const AppLanguageLoadingState());
 
-    final endpoint = dotenv.env[ApiEndPointConstants.API_ENDPOINT_3];
+    final endpoint = dotenv.env[EnvConstants.API_ENDPOINT_3];
 
     if (endpoint == null) return;
 
@@ -177,7 +177,7 @@ class AppLanguageCubit extends Cubit<AppLanguageState> {
           );
 
           if (context != null) {
-            if (!context.mounted) return; 
+            if (!context.mounted) return;
             BlocProvider.of<LanguageCubit>(context).toggleLanguage(shortCode: appLanguageEntity.shortCode);
           }
         }

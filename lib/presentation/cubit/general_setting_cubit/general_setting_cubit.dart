@@ -20,7 +20,7 @@ class GeneralSettingCubit extends Cubit<double> {
   GeneralSettingCubit({required this.apiUsecase}) : super(0);
 
   Future<void> getGeneralSetting<T extends ModelResponseExtend>() async {
-    final endpoint = dotenv.env[ApiEndPointConstants.API_ENDPOINT_1];
+    final endpoint = dotenv.env[EnvConstants.API_ENDPOINT_1];
     if (endpoint == null) return;
 
     Either<AppError, T> response = await apiUsecase.call(

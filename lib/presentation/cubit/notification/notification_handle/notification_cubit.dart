@@ -49,7 +49,7 @@ class NotificationCubit extends Cubit<NotificationState> {
   // }
 
   Future<void> getNotificationHistory<T extends ModelResponseExtend>({bool isRefreshIndicator = false}) async {
-    final endpoint = dotenv.env[ApiEndPointConstants.API_ENDPOINT_4];
+    final endpoint = dotenv.env[EnvConstants.API_ENDPOINT_4];
     if (endpoint == null) return;
     if (!isRefreshIndicator) emit(NotificationLoadingState());
 

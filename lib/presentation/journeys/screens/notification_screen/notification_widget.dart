@@ -56,7 +56,7 @@ abstract class NotificationWidget extends State<NotificationScreen> {
               ),
             ),
             Container(
-              color: appConstants.grey1.withOpacity(0.2),
+              color: appConstants.grey1.withValues(alpha: 0.2),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
